@@ -1,0 +1,197 @@
+:root {
+    color: #102a43;
+    background: #f4f6f8;
+    line-height: 1.7;
+    --surface: rgba(255, 255, 255, 0.96);
+    --surface-strong: rgba(255, 255, 255, 0.92);
+    --shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
+    --button-bg: #2563eb;
+    --button-hover: #1d4ed8;
+    font-family: "Elms Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: radial-gradient(circle at top, #eaf3ff 0%, #f4f6f8 58%, #f4f6f8 100%);
+}
+
+img {
+    border-radius: 1rem;
+    border: solid black;
+}
+
+body.page-opala {
+    background: linear-gradient(135deg, #c6d3d8 0%, #f7fbfd 100%);
+    .page-header {
+    background: linear-gradient(135deg, #9ca8b9 0%, #b2bbc7 100%);
+    padding: 2.8rem 1.25rem 2.5rem;
+    text-align: center;
+    color: inherit;
+}
+}
+
+body.page-mustang {
+    background: linear-gradient(135deg, #3c4b69 0%, #9ca1b4 100%);
+    .page-header {
+    background: linear-gradient(135deg, #1f2937 0%, #8494aa 100%);
+    padding: 2.8rem 1.25rem 2.5rem;
+    text-align: center;
+    color: inherit;
+}
+}
+
+body.page-brasilia {
+    background: linear-gradient(135deg, #192638 0%, #54607f 100%);
+    .page-header {
+    background: linear-gradient(135deg, #111c2b 0%, #212831 100%);
+    padding: 2.8rem 1.25rem 2.5rem;
+    text-align: center;
+    color: inherit;
+}
+}
+
+body.page-camaro {
+    background: linear-gradient(135deg, #131b2c 0%, #394658 100%);
+    .page-header {
+    background: linear-gradient(135deg, #1e324e 0%, #3a4657 100%);
+    padding: 2.8rem 1.25rem 2.5rem;
+    text-align: center;
+    color: inherit;
+}
+    color: #f8fafc;
+}
+
+body.page-fordescort {
+    background: linear-gradient(135deg, #2f3b56 0%, #6b7280 100%);
+.page-header {
+    background: linear-gradient(135deg, #1e2d3f 0%, #373d46 100%);
+    padding: 2.8rem 1.25rem 2.5rem;
+    text-align: center;
+    color: inherit;
+}
+}
+
+
+.hero {
+    max-width: 44rem;
+    margin: 0 auto;
+}
+
+.tag {
+    display: inline-flex;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    color: inherit;
+    font-size: 0.92rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.02;
+    color: rgb(243, 243, 243);
+}
+
+.hero p {
+    margin: 1rem auto 0;
+    max-width: 38rem;
+    font-size: 1.05rem;
+    color: rgba(211, 211, 211, 0.94);
+}
+
+.content {
+    width: min(100%, 980px);
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+}
+
+.content section {
+    background: var(--surface);
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+    margin-bottom: 1.75rem;
+    box-shadow: var(--shadow);
+}
+
+body.page-camaro .content section {
+    background: rgba(15, 23, 42, 0.88);
+}
+
+.section-title {
+    margin: 0 0 1rem;
+    font-size: 1.65rem;
+    line-height: 1.2;
+}
+
+.car-gallery {
+    display: grid;
+    gap: 1rem;
+}
+
+.car-gallery img {
+    object-fit: cover;
+    min-height: 180px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.9rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.actions {
+    text-align: center;
+}
+
+.button-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    background: var(--button-bg);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 18px 38px rgba(37, 99, 235, 0.24);
+}
+
+@media (max-width: 720px) {
+    .page-header {
+        padding: 2rem 1rem 2.2rem;
+    }
+
+    .content {
+        padding: 1.5rem 1rem 3rem;
+    }
+}

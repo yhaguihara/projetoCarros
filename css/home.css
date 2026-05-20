@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Special+Elite&display=swap');
+
+:root {
+    --bg: #eff3f9;
+    --surface: #ffffff;
+    --surface-strong: #f8fbff;
+    --text: #142536;
+    --text-muted: #475569;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+    color: var(--text);
+    background: var(--bg);
+    font-family: "Elms Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: radial-gradient(circle at top, #e2f0ff 0%, var(--bg) 60%);
+    color: var(--text);
+}
+
+.page-header {
+    background: linear-gradient(135deg, #1f2937 0%, #4b5563 100%);
+    color: white;
+    padding: 3.2rem 1.25rem 3rem;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.02;
+}
+
+.hero p {
+    margin: 1rem auto 0;
+    max-width: 42rem;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.content-layout {
+    padding: 2rem 1.25rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.intro,
+.cars-section,
+.page-footer {
+    background: var(--surface);
+    border-radius: 1.2rem;
+    box-shadow: var(--shadow);
+}
+
+.intro {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.intro h2,
+.section-header h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.intro p,
+.section-header p {
+    color: var(--text-muted);
+    margin-top: 1rem;
+    max-width: auto;
+}
+
+.cars-section {
+    padding: 2rem;
+}
+
+.section-header {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+}
+
+.cars-section .section-header h2 {
+    font-family: "Elms Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.cars-grid {
+    display: grid;
+    gap: 1.75rem;
+}
+
+.car-card {
+    background: var(--surface-strong);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.car-card:hover,
+.car-card:focus-within {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
+}
+
+.car-card figure {
+    margin: 0;
+    min-height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-card figure::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.14));
+    pointer-events: none;
+}
+
+.car-card iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    background: #e5e7eb;
+}
+
+.car-card figcaption {
+    padding: 1.25rem 1.5rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.button-link {
+    margin: 0 1.5rem 1.5rem;
+    background: var(--primary);
+    color: white;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+    background: var(--primary-dark);
+    box-shadow: 0 16px 30px rgba(37, 99, 235, 0.22);
+}
+
+.page-footer {
+    margin-top: 2rem;
+    padding: 1.75rem 2rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+#intro-title {
+    display: flex;
+    width: fit-content;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: rgba(14, 13, 13, 0.18);
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+}
+
+#cars-title {
+    display: inline-flex;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: rgba(14, 13, 13, 0.18);
+    color: inherit;
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 840px) {
+    .content-layout {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    .cars-section,
+    .page-footer {
+        padding: 1.5rem;
+    }
+
+    .car-card figcaption {
+        padding: 1rem 1.2rem;
+    }
+
+    .button-link {
+        width: calc(100% - 2.4rem);
+        margin: 0 1.2rem 1.25rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .page-header {
+        padding: 2rem 1rem 2.5rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .cars-section,
+    .page-footer {
+        border-radius: 1rem;
+    }
+}
